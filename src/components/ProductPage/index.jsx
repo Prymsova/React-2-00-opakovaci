@@ -19,11 +19,15 @@ const ProductPage = () => {
     }, [] );
 
     return (
-        <>
-            <img src={image} alt={name} />
-            <h3>{name}</h3>
-            <button className="buy">Objednat</button>
-        </>
+        <div className="productDetail">
+            <div className="productDetail__image">
+                <img src={image} alt={name} />
+            </div>
+            <div className="productDetail__description">
+                <h3>{name}</h3>
+                <button className="buy">Objednat</button>
+            </div>
+        </div>
     )
 }
 

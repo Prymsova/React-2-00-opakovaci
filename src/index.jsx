@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 
 import './style.css';
@@ -24,18 +24,19 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <header>
-        <h1>XXXMuck</h1>
-      </header>
+      <div className="wrapper">
+        <header>
+          <h1>XXXMuck</h1>
+        </header>
 
-      <Routes>
+        <Routes>
+          
+          <Route path="/" element={ <HomePage products={ products }/> } />
         
-        <Route path="/" element={ <HomePage products={ products }/> } />
-       
-        <Route path="/product/:id" element={ <ProductPage /> } />
-        
-      </Routes>
-    
+          <Route path="/product/:id" element={ <ProductPage /> } />
+          
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 };
